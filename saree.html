@@ -2,204 +2,352 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Shop by category</title>
-    <!-- <link rel="stylesheet" href="style.css"> -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-        crossorigin="anonymous"></script>
-    <!--font awesome-->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css"
-        integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <!--css-->
-    <style>
-        #nav {
-            color: black;
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Saree</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+  <!--font awesome-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css"
+  integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ=="
+  crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <style>
+    /* body {
+      background-color: #1a1a1a;
+      color: white;
+    } */
+
+    #nav {
+      color: black;
+    }
+
+    #nav:hover {
+      color: red;
+    }
+    .navbar {
+            position: sticky;
+            top: 0;
+            z-index: 1020;
+            /* Keeps it above other elements */
         }
 
-        #nav:hover {
-            color: red;
-        }
-    </style>
+    .product-card {
+      width: 200px;
 
-    <style>
-        body {
-            background-color: #f9f9f9;
-            font-family: Arial, sans-serif;
-        }
+      background-color: #fff;
+      border-radius: 10px;
+      overflow: hidden;
+      text-align: center;
+      color: black;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      padding: 10px;
+      transition: transform 0.3s;
+    }
 
-        .collection-card {
-            border: none;
-            border-radius: 10px;
-            overflow: hidden;
-            transition: transform 0.3s ease;
-        }
+    .product-card:hover {
+      transform: scale(1.05);
+    }
 
-        .collection-card:hover {
-            transform: scale(1.05);
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-        }
+    .product-card img {
+      max-width: 100%;
+      height: 250px;
+      border: 1px solid #ddd;
+      margin-bottom: 10px;
+    }
 
-        .card-title {
-            font-weight: bold;
-        }
+    .product-card h5 {
+      margin: 10px 0;
+    }
 
-        .card img {
-            height: 300px;
-            object-fit: cover;
-            transition: transform 0.3s ease-in-out;
 
-        }
 
-        .card img:hover {
-            transform: scale(0.9);
-        }
+    .container {
+      /* background-color: #1a1a1a; */
+      color: white;
+    }
 
-        .collection-card a {
-            text-decoration: none;
-            color: black;
-        }
-    </style>
+    /* modal */
+    .model-image {
+      border: 2px solid transparent;
+      height: 100px;
+      cursor: pointer;
+      transition: border 0.3s ease;
+    }
+
+    .model-image.selected {
+      border: 2px solid blue;
+    }
+
+    .card-title {
+      color: black;
+    }
+  </style>
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-lg bg-body-tertiary">
-        <div class="container-fluid">
-            <a href="#"><img src="./media/dummy1-removebg-preview.png" alt="logo" width="200px" class="ms-2"></a>
-            <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse"
-                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
-                aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-                    <li class="nav-item me-5" style="font-weight: 700;font-size: 18px;">
-                        <a class="nav-link" id="nav" aria-current="page" href="index.html">Home</a>
-                    </li>
-                    <li class="nav-item me-5" style="font-weight: 700;font-size: 18px;">
-                        <a class="nav-link" id="nav" href="shopbycategory.html">Shop by Category</a>
-                    </li>
-                    <li class="nav-item me-5 " style="font-weight: 700;font-size: 18px;">
-                        <a class="nav-link" id="nav" href="">Contact</a>
-                    </li>
-                    <li class="nav-item me-5" style="font-weight: 700;font-size: 18px;">
-                        <a class="nav-link " id="nav" href="">About Us</a>
-                    </li>
-                    <li class="nav-item me-5" style="font-weight: 700;font-size: 1.5rem;">
-                        <a href="./search.html"><i class="fa-solid fa-magnifying-glass text-dark"></i></a>
-                    </li>
-                    <li class="nav-item me-5" style="font-weight: 700;font-size: 1.5rem;">
-                        <a href=""><i class="fa-regular fa-user text-dark"></i></a>
-                    </li>
-                    <li class="nav-item me-5" style="font-weight: 700;font-size: 1.5rem;">
-                        <a href="#"><i class="fa-solid fa-cart-shopping text-dark"></i></a>
-                    </li>
-                </ul>
 
-            </div>
-        </div>
-    </nav>
+  <nav class="navbar navbar-expand-lg bg-body-tertiary">
+    <div class="container-fluid">
+      <a href="#"><img src="./media/dummy1-removebg-preview.png" alt="logo" width="200px" class="ms-2"></a>
+      <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse"
+        data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+        aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+          <li class="nav-item me-5" style="font-weight: 700;font-size: 18px;">
+            <a class="nav-link" id="nav" aria-current="page" href="index.html">Home</a>
+          </li>
+          <li class="nav-item me-5" style="font-weight: 700;font-size: 18px;">
+            <a class="nav-link" id="nav" href="shopbycategory.html">Shop by Category</a>
+          </li>
+          <li class="nav-item me-5 " style="font-weight: 700;font-size: 18px;">
+            <a class="nav-link" id="nav" href="">Contact</a>
+          </li>
+          <li class="nav-item me-5" style="font-weight: 700;font-size: 18px;">
+            <a class="nav-link " id="nav" href="">About Us</a>
+          </li>
+          <li class="nav-item me-5" style="font-weight: 700;font-size: 1.5rem;">
+            <a href="./search.html"><i class="fa-solid fa-magnifying-glass text-dark"></i></a>
+          </li>
+          <li class="nav-item me-5" style="font-weight: 700;font-size: 1.5rem;">
+            <a href=""><i class="fa-regular fa-user text-dark"></i></a>
+          </li>
+          <li class="nav-item me-5" style="font-weight: 700;font-size: 1.5rem;">
+            <a href="#"><i class="fa-solid fa-cart-shopping text-dark"></i></a>
+          </li>
+        </ul>
 
-    <div class="container py-5">
-        <h1 class="mb-5">Collections</h1>
-        <div class="row g-4">
-            <div class="col-md-4 col-sm-6">
-                <div class="card collection-card">
-                    <a href="tops.html">
-                        <img src="https://assets.ajio.com/medias/sys_master/root/20230624/zNCV/6496b822eebac147fcfc3144/-288Wx360H-465591174-black-MODEL.jpg" class="card-img-top" alt="Best Sellers"
-                            style="height: 555px;">
-                        <div class="card-body text-center">
-                            <h5 class="card-title">TOPS &rarr;</h5>
-                        </div>
-                    </a>
-
-                </div>
-            </div>
-            <div class="col-md-4 col-sm-6">
-                <div class="card collection-card">
-                    <a href="co-ord_sets.html">
-                        <img src="https://orgenza.in/cdn/shop/products/PXL_20210610_093126776.PORTRAIT.jpg?v=1679648922"
-                            class="card-img-top" alt="Frock" style="height: 555px;">
-                        <div class="card-body text-center">
-                            <h5 class="card-title">Saree &rarr;</h5>
-                        </div>
-                    </a>
-
-                </div>
-            </div>
-            <div class="col-md-4 col-sm-6">
-                <div class="card collection-card">
-                    <a href="frock.html">
-                        <img src="https://assets.myntassets.com/h_1440,q_100,w_1080/v1/assets/images/16857646/2024/4/30/02ebe685-6062-440f-affc-02142dea420d1714451865170-Libas-Women-Pink-Floral-Printed-Panelled-Pure-Cotton-Kurta-w-2.jpg" class="card-img-top" alt="Frock" style="height: 555px;">
-                        <div class="card-body text-center">
-                            <h5 class="card-title">Kurtha &rarr;</h5>
-                        </div>
-                    </a>
-
-                </div>
-            </div>
-            <div class="col-md-4 col-sm-6">
-                <div class="card collection-card">
-                    <a href="new_launches.html">
-                        <img src="https://www.vishalmegamart.com/dw/image/v2/BGHT_PRD/on/demandware.static/-/Sites-vmm-apparel-master-catalog/default/dw42eed438/images/large/1121078412005.jpg?sw=900&sh=900"
-                            class="card-img-top" alt="New Launches" style="height: 600px;">
-                        <div class="card-body text-center">
-                            <h5 class="card-title">Lower &rarr;</h5>
-                        </div>
-
-                    </a>
-
-                </div>
-            </div>
-            
-        </div>
+      </div>
     </div>
+  </nav>
 
 
-    <!--footer-->
-    <footer class=" bg-dark text-light container-fluid">
-        <div class="row text-center">
-            <!-- <div class="col-md-1"></div> -->
-            <div class="col-md-4 mt-5">
-                <h3>Our Address</h3>
-                <p class="mt-3">ABC COMPANY</p>
-                <p>Phone : 8592083885</p>
-            </div>
-            <div class="col-md-4 mt-5 ">
-                <h3>Quick Links</h3>
-                <a href="./privacy-policy.html" class="text-light mt-3" style="text-decoration: none;">Privacy
-                    Policy</a><br>
-                <a href="./refund-policy.html" class="text-light mt-2" style="text-decoration: none;">Refund
-                    Policy</a><br>
-                <a href="./shipping-policy.html" class="text-light mt-2" style="text-decoration: none;">Shipping
-                    Policy</a><br>
-                <a href="./search.html" class="text-light mt-2" style="text-decoration: none;">Search</a><br>
-                <a href="./terms-of-service.html" class="text-light mt-2" style="text-decoration: none;">Terms of
-                    Service</a><br>
-                <a href="./contact-information.html" class="text-light mt-2" style="text-decoration: none;">Contact
-                    Information</a><br>
-            </div>
-            <div class="col-md-4 mt-5">
-                <h3>Customer Care</h3>
-                <p class="mt-3">MON - SAT from 9 AM - 6 PM</p>
-                <p>+91 8590073917</p>
-                <p>abcclothing@gmail.com</p>
-            </div>
-            <!-- <div class="col-md-1"> -->
+  <div class="container py-5">
+    <div class="d-flex flex-row flex-wrap justify-content-center gap-3">
+      <!-- Card 1 -->
+      <div class="product-card">
+        <img src="https://m.media-amazon.com/images/I/617YAcTci7L._SX569_.jpg" alt="Product 1" class="img-fluid">
+        <h5>Orange</h5>
+        <!-- Trigger Button -->
+        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modelSelectionModal">
+          Try on Virtually
+        </button>
+      </div>
+      <!-- Card 2 -->
+      <div class="product-card">
+        <img src="https://m.media-amazon.com/images/I/716brkjPo-L._SY879_.jpg" alt="Product 2" class="img-fluid">
+        <h5>Mix pattern</h5>
+        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modelSelectionModal">
+          Try on Virtually
+        </button>
+      </div>
+      <!-- Card 3 -->
+      <div class="product-card">
+        <img src="https://m.media-amazon.com/images/I/51VdTFK4d8L._SY879_.jpg" alt="Product 3" class="img-fluid">
+        <h5>Blue Tee</h5>
+        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modelSelectionModal">
+          Try on Virtually
+        </button>
+      </div>
+      <!-- Card 4 -->
+      <div class="product-card">
+        <img src="https://m.media-amazon.com/images/I/61lu6TiYmzL._SX679_.jpg" alt="Product 4" class="img-fluid">
+        <h5>Brown Tee</h5>
+        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modelSelectionModal">
+          Try on Virtually
+        </button>
+      </div>
+      <!-- Card 5 -->
+      <div class="product-card">
+        <img src="https://m.media-amazon.com/images/I/81ZMVtVyL0L._SY879_.jpg" alt="Product 5" class="img-fluid">
+        <h5>Casual T-Shirt</h5>
+        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modelSelectionModal">
+          Try on Virtually
+        </button>
+      </div>
+      <!-- Card 6 -->
+      <div class="product-card">
+        <img src="https://m.media-amazon.com/images/I/61nz3LSoUvL._SX679_.jpg" alt="Product 6" class="img-fluid">
+        <h5>White crop top</h5>
+        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modelSelectionModal">
+          Try on Virtually
+        </button>
+      </div>
+    </div>
+  </div>
 
+
+
+  <!-- Modal -->
+  <div class="modal fade" id="modelSelectionModal" tabindex="-1" aria-labelledby="modelSelectionLabel"
+    aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title text-center" id="modelSelectionLabel">Select a Model</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
-        <div class="text-center mt-5 ">
-            <a href="#"><i class="fa-brands fa-facebook me-5 fs-2 text-light"></i></a>
-            <a href="#"><i class="fa-brands fa-instagram me-5 fs-2 text-light"></i></a>
-            <a href="#"><i class="fa-brands fa-youtube me-5 fs-2 text-light"></i></a>
+        <div class="modal-body">
+          <div class="container text-center">
+            <div class="row justify-content-center mb-4">
+              <!-- Model Images -->
+              <div class="col-4 col-md-2">
+                <img 
+                  src="https://st2.depositphotos.com/4720955/8694/i/950/depositphotos_86947568-stock-photo-fashion-model-woman-pose-in.jpg"
+                  alt="Model 1" class="model-image img-fluid">
+              </div>
+              <div class="col-4 col-md-2">
+                <img src="https://fashionweekdaily.com/wp-content/uploads/2024/09/Maria-1.jpg" alt="Model 2"
+                  class="model-image img-fluid">
+              </div>
+              <div class="col-4 col-md-2">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSlg_hJruJKua4fGA1JiSPv2os7deNGzaka7g&s"
+                  alt="Model 3" class="model-image img-fluid">
+              </div>
+              <div class="col-4 col-md-2">
+                <img
+                  src="https://img.freepik.com/free-photo/beautiful-smiling-hipster-brunette-woman-model-stylish-blue-overcoat-isolated-white-full-length_158538-12575.jpg"
+                  alt="Model 4" class="model-image img-fluid">
+              </div>
+              <div class="col-4 col-md-2">
+                <img
+                  src="https://st4.depositphotos.com/36028332/38055/i/450/depositphotos_380553054-stock-photo-beautiful-female-model-wearing-malaysia.jpg"
+                  alt="Model 5" class="model-image img-fluid">
+              </div>
+              <div class="col-4 col-md-2">
+                <img
+                  src="https://static.vecteezy.com/system/resources/previews/011/910/977/large_2x/full-street-fashion-slender-figure-beautiful-face-graceful-girl-sitting-on-isolated-white-background-portrait-of-female-model-in-studio-plastic-surgery-and-aesthetic-cosmetology-free-photo.jpg"
+                  alt="Model 6" class="model-image img-fluid">
+              </div>
+            </div>
+            <!-- File Upload Section -->
+            <div class="text-center mt-4">
+              <h6>Or Upload Your Own Image</h6>
+              <p class="text-muted">For better results, upload a proper image as of reference models</p>
+              <input type="file" class="form-control mb-3" accept="image/*">
+            </div>
+          </div>
         </div>
-        <hr class="mt-4">
-        <p class="text-center mt-2">© 2024, ABC COMPANY</p>
-    </footer>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-success" id="tryOnBtn" data-bs-toggle="modal"
+            data-bs-target="#resultModal">Try On</button>
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const modelImages = document.querySelectorAll(".model-image");
+  
+      modelImages.forEach((image) => {
+        image.addEventListener("click", () => {
+          // Remove the 'selected' class from all images
+          modelImages.forEach((img) => img.classList.remove("selected"));
+  
+          // Add the 'selected' class to the clicked image
+          image.classList.add("selected");
+        });
+      });
+    });
+  </script>
+
+  <!-- Result Modal -->
+  <div class="modal fade" id="resultModal" tabindex="-1" aria-labelledby="resultModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title text-center" id="resultModalLabel">Try On Results</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <div class="container text-center">
+            <div class="row justify-content-center">
+              <!-- Original Image Card -->
+              <div class="col-md-5">
+                <div class="card">
+                  <img src="https://m.media-amazon.com/images/I/71NR4MwqkjL._SY879_.jpg" class="card-img-top"
+                    alt="Original Image">
+                  <div class="card-body">
+                    <h5 class="card-title">Original Image</h5>
+                  </div>
+                </div>
+              </div>
+              <!-- Processed Image Card -->
+              <div class="col-md-5">
+                <div class="card">
+                  <img src="https://fashionweekdaily.com/wp-content/uploads/2024/09/Maria-1.jpg" class="card-img-top"
+                    alt="Processed Image">
+                  <div class="card-body">
+                    <h5 class="card-title">Processed Image</h5>
+                  </div>
+
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+
+
+  <!--footer-->
+  <footer class=" bg-dark text-light container-fluid">
+    <div class="row text-center">
+      <!-- <div class="col-md-1"></div> -->
+      <div class="col-md-4 mt-5">
+        <h3>Our Address</h3>
+        <p class="mt-3">ABC COMPANY</p>
+        <p>Phone : 8592083885</p>
+      </div>
+      <div class="col-md-4 mt-5 ">
+        <h3>Quick Links</h3>
+        <a href="./privacy-policy.html" class="text-light mt-3" style="text-decoration: none;">Privacy
+          Policy</a><br>
+        <a href="./refund-policy.html" class="text-light mt-2" style="text-decoration: none;">Refund
+          Policy</a><br>
+        <a href="./shipping-policy.html" class="text-light mt-2" style="text-decoration: none;">Shipping
+          Policy</a><br>
+        <a href="./search.html" class="text-light mt-2" style="text-decoration: none;">Search</a><br>
+        <a href="./terms-of-service.html" class="text-light mt-2" style="text-decoration: none;">Terms of
+          Service</a><br>
+        <a href="./contact-information.html" class="text-light mt-2" style="text-decoration: none;">Contact
+          Information</a><br>
+      </div>
+      <div class="col-md-4 mt-5">
+        <h3>Customer Care</h3>
+        <p class="mt-3">MON - SAT from 9 AM - 6 PM</p>
+        <p>+91 8590073917</p>
+        <p>abcclothing@gmail.com</p>
+      </div>
+      <!-- <div class="col-md-1"> -->
+
+    </div>
+    <div class="text-center mt-5 ">
+      <a href="#"><i class="fa-brands fa-facebook me-5 fs-2 text-light"></i></a>
+      <a href="#"><i class="fa-brands fa-instagram me-5 fs-2 text-light"></i></a>
+      <a href="#"><i class="fa-brands fa-youtube me-5 fs-2 text-light"></i></a>
+    </div>
+    <hr class="mt-4">
+    <p class="text-center mt-2">© 2024, ABC COMPANY</p>
+  </footer>
+
+
+
 </body>
 
 </html>
