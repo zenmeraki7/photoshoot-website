@@ -32,13 +32,67 @@
             z-index: 1020;
             /* Keeps it above other elements */
         }
-        .carousel-inner{
+
+        .carousel-inner {
             height: 400px;
         }
 
+        .carousel-control-prev-icon,
+        .carousel-control-next-icon {
+            background-color: rgba(0, 0, 0, 0.432);
+            border-radius: 50%;
+            width: 30px;
+            height: 30px;
+            
+        }
+
+        
+        
+
+        /* next section */
+        .category-item img {
+            width: 180px;
+            height: 170px;
+            border-radius: 50%;
+            /* border-color: #060606; */
+            object-fit: cover;
+            /* margin-bottom: 10px; */
+        }
+
+        .category-item {
+            text-align: center;
+            font-size: 14px;
+            font-weight: bold;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            /* border-radius: 100%; */
+
+        }
+
+        .category-item:hover {
+            transform: scale(1.1);
+            /* Slightly enlarges the card */
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+            /* Adds a shadow effect */
+        }
+
+        .icon1,
+        .icon2 {
+            background-color: rgba(0, 0, 0, 0.405);
+            border-radius: 50%;
+            width: 30px;
+            height: 25px;
+            
+            margin-top: -240px;
+
+        }
+
         /* video cards */
+        .videosection {
+            margin-top: -170px;
+        }
+
         .video {
-            margin-top: 30px;
+            margin-top: -50px;
             border-radius: 10px;
             /* height: 400px; */
         }
@@ -79,6 +133,7 @@
             /* Match the card's border radius */
         }
 
+        /* next section */
         .offer-card {
             background-color: black;
             color: white;
@@ -114,7 +169,7 @@
             margin: 10px 0;
         }
 
-        .offer-price {
+        /* .offer-price {
             font-size: 1rem;
             font-weight: bold;
             margin-top: 10px;
@@ -123,7 +178,96 @@
         .strike-text {
             text-decoration: line-through;
             color: #ffc107;
+        } */
+
+        /* mens section */
+        
+        .fitzone-banner {
+            background: linear-gradient(to right, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.4)), url('https://img.freepik.com/premium-photo/top-view-fathers-day-themed-mens-fashion-items-wooden-background-generative-ai_1259709-87437.jpg?semt=ais_hybrid');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            padding: 150px;
+            border-radius: 8px;
+            position: relative;
+          
         }
+        .fitzone-banner h1 {
+            font-size: 3rem;
+            font-weight: bold;
+        }
+        .fitzone-banner p {
+            font-size: 1.2rem;
+        }
+        .fitzone-banner a {
+            background: black;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: background 0.3s ease;
+        }
+        .fitzone-banner a:hover {
+            background: gray;
+        }
+        
+
+        /* mens card */
+        .product-card {
+            text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .product-card a{
+            text-decoration: none;
+            color: black;
+        }
+        .product-card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        }
+        .product-card img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+        }
+        .product-title {
+            font-size: 1.2rem;
+            font-weight: bold;
+            margin-top: 10px;
+        }
+
+        /* WOMEN SECTION */
+        .womens-banner {
+            background: linear-gradient(to right, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.4)), url('https://img.freepik.com/premium-photo/winter-concept-with-sweater-gift-box-blue-background_185193-19182.jpg');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            padding: 150px;
+            border-radius: 8px;
+            position: relative;
+          
+        }
+        .womens-banner h1 {
+            font-size: 3rem;
+            font-weight: bold;
+        }
+        .womens-banner p {
+            font-size: 1.2rem;
+        }
+        .womens-banner a {
+            background: black;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: background 0.3s ease;
+        }
+        .womens-banner a:hover {
+            background: gray;
+        }
+        
 
         /* shop by collection */
         .collection-card {
@@ -171,8 +315,6 @@
         .view-all-btn:hover {
             background-color: #555;
         }
-
-        
     </style>
 </head>
 
@@ -193,9 +335,9 @@
                     <li class="nav-item me-5" style="font-weight: 700;font-size: 18px;">
                         <a class="nav-link" id="nav" href="shopbycategory.html">Shop by Category</a>
                     </li>
-                    <li class="nav-item me-5 " style="font-weight: 700;font-size: 18px;">
+                    <!-- <li class="nav-item me-5 " style="font-weight: 700;font-size: 18px;">
                         <a class="nav-link" id="nav" href="">Contact</a>
-                    </li>
+                    </li> -->
                     <li class="nav-item me-5" style="font-weight: 700;font-size: 18px;">
                         <a class="nav-link " id="nav" href="">About Us</a>
                     </li>
@@ -226,7 +368,7 @@
         </div>
         <div class="carousel-inner">
             <div class="carousel-item active">
-                <img src=" https://png.pngtree.com/thumb_back/fw800/background/20230722/pngtree-pastel-background-with-3d-render-of-clothes-on-hanger-gift-and-image_3783498.jpg"
+                <img src=" https://img.freepik.com/free-photo/side-view-woman-looking-clothes_23-2150746358.jpg"
                     class="d-block w-100" alt="...">
             </div>
             <div class="carousel-item">
@@ -234,8 +376,8 @@
                     class="d-block w-100" alt="...">
             </div>
             <div class="carousel-item">
-                <img src="https://i.pinimg.com/736x/39/2f/b6/392fb6f4ab85c1eb970e55f2ce888275.jpg"
-                    class="d-block w-100" alt="...">
+                <img src="https://i.pinimg.com/736x/39/2f/b6/392fb6f4ab85c1eb970e55f2ce888275.jpg" class="d-block w-100"
+                    alt="...">
             </div>
         </div>
         <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
@@ -250,19 +392,86 @@
         </button>
     </div>
 
-    <div class="container mb-5">
+    <!-- next section -->
+    <div class="container-fluid mt-5 ">
+        <div id="categoryCarousel" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <div class="d-flex justify-content-around">
+                        <div class="category-item">
+                            <img src="https://adn-static1.nykaa.com/nykdesignstudio-images/pub/media/catalog/product/b/5/b51bb3fBITTI605JR_2.jpg?rnd=20200526195200&tr=w-512"
+                                alt="Indianwear">
+                            <p>Indianwear</p>
+                        </div>
+                        <div class="category-item">
+                            <img src="https://m.media-amazon.com/images/I/8125rcd0dNL._SY741_.jpg" alt="Westernwear">
+                            <p>Westernwear</p>
+                        </div>
+                        <div class="category-item">
+                            <img src="https://m.media-amazon.com/images/I/31NfkV9hKXL.jpg" alt="Men">
+                            <p>Men</p>
+                        </div>
+                        <div class="category-item">
+                            <img src="https://m.media-amazon.com/images/I/61yNccAaNwL._SY879_.jpg" alt="Jackets">
+                            <p>Jackets</p>
+                        </div>
+                        <div class="category-item">
+                            <img src="https://m.media-amazon.com/images/I/61q5CWbukpL._SX569_.jpg" alt="Kurthas">
+                            <p>Kurthas</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="d-flex justify-content-around">
+                        <div class="category-item">
+                            <img src="https://m.media-amazon.com/images/I/51LXBZCl95L._SY741_.jpg" alt="Festive Wear">
+                            <p>Festive Wear</p>
+                        </div>
+                        <div class="category-item">
+                            <img src="https://m.media-amazon.com/images/I/91uNK+Vh7IL._SY741_.jpg" alt="Skirts">
+                            <p>Skirts</p>
+                        </div>
+                        <div class="category-item">
+                            <img src="https://m.media-amazon.com/images/I/51IE7r2pc+L._SX679_.jpg" alt="Hoodies">
+                            <p>Hoodies</p>
+                        </div>
+                        <div class="category-item">
+                            <img src="https://m.media-amazon.com/images/I/71LDyVVbHkL._SX569_.jpg"
+                                alt="Traditional wear">
+                            <p>Traditional wear</p>
+                        </div>
+                        <div class="category-item">
+                            <img src="https://m.media-amazon.com/images/I/61Do40y3vDL._SY741_.jpg" alt="Jeans">
+                            <p>Jeans</p>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#categoryCarousel" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon icon1" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#categoryCarousel" data-bs-slide="next">
+                <span class="carousel-control-next-icon icon2" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+    </div>
+
+    <!-- video section -->
+    <div class="container mb-5 videosection ">
         <div class="video">
-            <div class="row row-cols-1 row-cols-md-3 g-4 ">
+            <div class="row row-cols-1 row-cols-md-3 g-4">
                 <div class="col">
                     <div class="card h-80">
                         <video autoplay loop muted>
-                            <source src="./media/WhatsApp Video 2025-01-03 at 14.01.44_6f78b8b7.mp4" type="video/mp4"
-                                hei>
+                            <source src="./media/WhatsApp Video 2025-01-03 at 14.01.44_6f78b8b7.mp4" type="video/mp4">
                         </video>
                         <div class="card-body">
                             <center>
                                 <h3 class="card-title">HOODIES</h3>
-                                <!-- <h4>2500₹</h4> -->
                             </center>
                         </div>
                     </div>
@@ -275,7 +484,6 @@
                         <div class="card-body">
                             <center>
                                 <h3 class="card-title">DRESSES</h3>
-                                <!-- <h4>3500₹</h4> -->
                             </center>
                         </div>
                     </div>
@@ -288,7 +496,6 @@
                         <div class="card-body">
                             <center>
                                 <h3 class="card-title">SAREES</h3>
-                                <!-- <h4>1500₹</h4> -->
                             </center>
                         </div>
                     </div>
@@ -296,6 +503,7 @@
             </div>
         </div>
     </div>
+
 
     <!-- offer card -->
     <div class="container-fluid my-5">
@@ -306,7 +514,7 @@
                     <div class="offer-content">
                         <h4 class="offer-title">Shirts,T-shirts</h4>
                         <!-- <p class="offer-details">Raymond, Trident & more</p> -->
-                        <p class="offer-price">Min. 70% Off <span class="strike-text">40% Off</span></p>
+                        <!-- <p class="offer-price">Min. 70% Off <span class="strike-text">40% Off</span></p> -->
                     </div>
                     <img src="media/71SAYrGnadL._SY741_-removebg-preview.png" alt="Bedsheets" class="offer-image">
                 </div>
@@ -317,7 +525,7 @@
                     <div class="offer-content">
                         <h4 class="offer-title">Jackets, Hoodies</h4>
                         <!-- <p class="offer-details">PUMA, USPA, Wildcraft</p> -->
-                        <p class="offer-price">55-80% Off</p>
+                        <!-- <p class="offer-price">55-80% Off</p> -->
                     </div>
                     <img src="media/71trMI9VDJL._SY741_-removebg-preview.png" alt="Jackets" class="offer-image">
                 </div>
@@ -328,7 +536,7 @@
                     <div class="offer-content">
                         <h4 class="offer-title">Kurta Sets, Sarees</h4>
                         <!-- <p class="offer-details">Min. 70% Off</p> -->
-                        <p class="offer-price">Limited Time Offers</p>
+                        <!-- <p class="offer-price">Limited Time Offers</p> -->
                     </div>
                     <img src="media/61D3BDWuPmL._SY741_-removebg-preview.png" alt="Sarees" class="offer-image">
                 </div>
@@ -339,7 +547,7 @@
                     <div class="offer-content">
                         <h4 class="offer-title">Party Wears</h4>
                         <!-- <p class="offer-details">60-80% Off</p> -->
-                        <p class="offer-price">Limited Time Offers</p>
+                        <!-- <p class="offer-price">Limited Time Offers</p> -->
                     </div>
                     <img src="media/71xULJlZzCL._SX679_-removebg-preview.png" alt="Clothing" class="offer-image">
                 </div>
@@ -369,47 +577,121 @@
         </div>
     </div>
 
-    <!-- Shop by Collections Section -->
-    <div class="container py-5 mt-2">
-        <h1 class="mb-1">Shop by Collections</h1>
-        <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4 mt-3">
-            <!-- Collection 1 -->
-            <div class="col">
-                <div class="collection-card">
-                    <a href="">
-                        <img src="https://assets.ajio.com/medias/sys_master/root/20230624/zNCV/6496b822eebac147fcfc3144/-288Wx360H-465591174-black-MODEL.jpg"
-                            alt="tops">
-                        <h5>TOPS &rarr;</h5>
-                    </a>
-                </div>
-            </div>
+    
 
-            <!-- Collection 2 -->
-            <div class="col">
-                <div class="collection-card">
-                    <a href="saree.html">
-                        <img src="https://orgenza.in/cdn/shop/products/PXL_20210610_093126776.PORTRAIT.jpg?v=1679648922"
-                            alt="saree">
-                        <h5>SAREE &rarr;</h5>
-                    </a>
-                </div>
-            </div>
-
-            <!-- Collection 3 -->
-            <div class="col">
-                <div class="collection-card">
-                    <a href="kurtha.html">
-                        <img src="https://assets.myntassets.com/h_1440,q_100,w_1080/v1/assets/images/16857646/2024/4/30/02ebe685-6062-440f-affc-02142dea420d1714451865170-Libas-Women-Pink-Floral-Printed-Panelled-Pure-Cotton-Kurta-w-2.jpg"
-                            alt="kurtha">
-                        <h5>KURTHA &rarr;</h5>
-                    </a>
-                </div>
+    <!-- MENS Section -->
+    <div class="container-fluid my-5">
+        <div class="fitzone-banner d-flex align-items-center">
+            <div class="text-white">
+                <h1>MENS COLLECTION</h1>
+                <p>One-stop destination for all your  needs!</p>
+                <a href="#">Shop Now &rarr;</a>
             </div>
         </div>
-        <div class="text-center mt-3">
-            <a href="shopbycategory.html" class="btn btn-dark border-2">View all</a>
+        
+        
+    </div>
+
+
+    <!-- Mens CARDS -->
+    <div class="container-fluid my-5">
+        <h2 class="text-center mb-4">Season's Favourites</h2>
+        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-4 row-cols-lg-5 g-2">
+            <div class="col">
+                <div class="product-card">
+                    <img src="https://images-static.nykaa.com/uploads/e80f0751-63b8-4431-a8af-e4f49fa4c7d0.jpg?tr=w-360,cm-pad_resize" alt="Hawaiian Fits">
+                    <div class="product-title">HAWAIIAN FITS</div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="product-card">
+                    <img src="https://images-static.nykaa.com/uploads/e1765955-9874-4b56-94ba-c399a718d614.jpg?tr=w-360,cm-pad_resize" alt="Korean Fits">
+                    <div class="product-title">KOREAN FITS</div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="product-card">
+                    <img src="https://images-static.nykaa.com/uploads/23eab7e3-e903-4ff1-9615-9254ad56bb89.jpg?tr=w-360,cm-pad_resize" alt="Backstory Tees">
+                    <div class="product-title">BACKSTORY TEES</div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="product-card">
+                    <img src="https://images-static.nykaa.com/uploads/6e44b00f-90b4-4e8d-a489-e4892d970c39.jpg?tr=w-360,cm-pad_resize" alt="Cuban Collar Shirts">
+                    <div class="product-title">CUBAN COLLAR SHIRTS</div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="product-card">
+                    <img src="https://images-static.nykaa.com/uploads/7c03450d-98af-4a10-a6f4-fe2725b68cc8.jpg?tr=w-360,cm-pad_resize" alt="90's Minimalism">
+                    <div class="product-title">90'S MINIMALISM</div>
+                </div>
+            </div>
         </div>
     </div>
+
+    <!-- Womens Section -->
+    <div class="container-fluid my-5">
+        <div class="womens-banner d-flex align-items-center">
+            <div class="text-white">
+                <h1>WOMENS COLLECTION</h1>
+                <p>One-stop destination for all your  needs!</p>
+                <a href="#">Shop Now &rarr;</a>
+            </div>
+        </div> 
+    </div>
+
+    <!-- WOMENS SECTION -->
+    <div class="container-fluid my-5">
+        <h2 class="text-center mb-4">Season's Favourites</h2>
+        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-4 row-cols-lg-5 g-2">
+            <div class="col">
+                <div class="product-card">
+                    <a href="./tops.html">
+                        <img src="https://m.media-amazon.com/images/I/81zyRQMBk9L._AC_UY1100_.jpg" alt="Hawaiian Fits">
+                    <div class="product-title">TOPS</div>
+                    </a>
+                    
+                </div>
+            </div>
+            <div class="col">
+                <div class="product-card">
+                    <a  href="saree.html">
+                        <img src="https://adn-static1.nykaa.com/nykdesignstudio-images/pub/media/catalog/product/a/5/a5268a26190_2_5.jpg?rnd=20200526195200&tr=w-512" alt="Korean Fits">
+                        <div class="product-title">SAREES</div>
+                    </a>
+                   
+                </div>
+            </div>
+            <div class="col">
+                <div class="product-card">
+                    <a href="./lower.html">
+                        <img src="https://adn-static1.nykaa.com/nykdesignstudio-images/pub/media/catalog/product/1/b/1bc352cKTTLADIESJEANS823-BlueLight_3.jpg?rnd=20200526195200&tr=w-512" alt="Cuban Collar Shirts">
+                    <div class="product-title">BOTTOM</div>
+                    </a>
+                    
+                </div>
+            </div>
+            <div class="col">
+                <div class="product-card">
+                    <a href="./kurtha.html">
+                        <img src="https://adn-static1.nykaa.com/nykdesignstudio-images/pub/media/catalog/product/0/5/059e9edLA31110170_2.jpg?rnd=20200526195200&tr=w-512" alt="Backstory Tees">
+                    <div class="product-title">KURTAS</div>
+                    </a>
+                    
+                </div>
+            </div>
+           
+            <div class="col">
+                <div class="product-card">
+                    <img src="https://adn-static1.nykaa.com/nykdesignstudio-images/pub/media/catalog/product/1/b/1bb6931NYKFF_LSDY0030_4.jpg?rnd=20200526195200&tr=w-512" alt="90's Minimalism">
+                    <div class="product-title">LEHENGAS</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+  
 
 
 
